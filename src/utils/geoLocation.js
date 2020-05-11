@@ -4,7 +4,6 @@ const geoLocation = (location, callback) => {
   axios.get('https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(location) + '.json?access_token=pk.eyJ1IjoiYXJ1bnJhZ2hhdmFuIiwiYSI6ImNrOXhta3VubjAyYWMzbXM0eGJiMTBlbDcifQ.tp7x1IjIs2s6aOEt79U4Tg&limit=1')
     .then(({data}) => {
       let strData=JSON.stringify(data,null,'\t')
-      console.log(strData)
       callback(
         undefined,
         {
