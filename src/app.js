@@ -6,6 +6,7 @@ const geoLocation = require('./utils/geoLocation')
 const weatherData = require('./utils/weatherData')
 
 const app = express()
+const port=process.env.PORT || 3000
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
@@ -106,6 +107,6 @@ app.get('*', (req, res) => {
       errorMessage: 'Page not found.'
   })
 })
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port '+port)
 })

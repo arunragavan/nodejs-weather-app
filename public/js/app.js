@@ -4,7 +4,7 @@ function performWeatherRequest(e) {
     let resultElement = document.getElementById('postResult');
     resultElement.innerHTML = '';
     let location = document.getElementById('Location').value;
-    axios.post('http://localhost:3000/get_weather', {
+    axios.post('/get_weather', {
         Location: location,
     })
         .then(function (response) {
