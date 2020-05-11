@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <p>Use this site to get your weather!</p>
+
+        <form id="inputForm" class="form-inline"> 
+            <input type="text" id="Location" name="Location" value="Location">
+           
+           <button type="submit" class="btn btn-primary">Search</button>
+           <div class="panel-body" id="postResult"></div>
+        </form>
+    </div>
+    
+
+    {{>footer}}
+
+    <script src="/js/app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+</body>
+
+</html>
