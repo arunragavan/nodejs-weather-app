@@ -1,3 +1,4 @@
+//Main app
 
 document.getElementById('inputForm').addEventListener('submit', performWeatherRequest);
 function performWeatherRequest(e) {
