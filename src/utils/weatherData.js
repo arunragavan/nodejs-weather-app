@@ -9,7 +9,10 @@ const weatherData = (longtitude, latitude, callback) => {
                     temperature: data.current.temperature,
                     weather_descriptions: data.current.weather_descriptions[0],
                     humidity:data.current.humidity,
-                    feelslike:data.current.feelslike
+                    precipitation:data.current.precip,
+                    feelslike:data.current.feelslike,
+                    uvindex:data.current.uv_index,
+                    windspeed:data.current.wind_speed
                 }
             )
         }
